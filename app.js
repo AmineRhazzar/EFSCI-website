@@ -3,9 +3,9 @@ const setHeaderHeight = () => {
     document.querySelector(".header").style.height =
         headerImg.clientHeight + "px";
 };
-setHeaderHeight();
+window.addEventListener("load", () => {
+    setHeaderHeight();
+});
 window.addEventListener("resize", () => {
     setHeaderHeight();
 });
-
-
