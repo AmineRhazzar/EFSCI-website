@@ -1,0 +1,225 @@
+:root{
+    --text-primary: #e9e8e6;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #e9e8e6;
+    height: fit-content;
+    width: auto;
+    overflow-x: hidden;
+}
+
+.header{
+    position: relative;
+    min-width: 100vw;
+    background-color: black;  
+    padding: 2rem ;
+    /* the height is set by javascript to be equal to the height of .header-img */
+}
+.header *{
+    position: relative;
+    z-index: 1;
+}
+
+.header-img{
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+nav{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: chocolate; */
+}
+
+.logo{
+    width: 10rem;
+}
+
+.nav-links{
+
+    font-weight:500;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    list-style: none;
+}
+
+.nav-links-a{
+    text-decoration: none;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+    outline: none;
+    color: #e9e8e6;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.nav-links-a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.inscription{
+    padding: .6rem 3.3rem;
+    background-color: #af7d51;
+}
+
+main{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    margin-left: 4rem;
+    height: 16rem;
+    
+}
+
+.home-title{
+    min-height: 14rem;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subtitle-top{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1.8px;
+}
+.title{
+    font-size: 3.625rem;
+    line-height: 69px;
+    font-weight: bold;
+}
+.subtitle-bot{
+    font-weight: light;
+    font-size: 1rem;
+}
+
+.in-pic{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+.inscris{
+    margin-top: 5rem;
+    margin-left: 7rem;
+    text-decoration: none;
+    position: relative;
+    outline: none;
+    font-size: 1.3rem;
+    color: #e9e8e6;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s all ease;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0 1rem .5rem 0.5rem;  
+    overflow:hidden ;  
+}
+
+.inscris:hover::after{
+    content: '';
+    width: 15%;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.3));
+    transform: skewX(-20deg);
+    /* rgba(255, 255, 255, 0.4) */
+    animation: appear .5s ease-out forwards;
+}
+@keyframes appear {
+    from{
+        left:-20%;
+    }to{
+        left: 120%;
+    }
+}
+
+.inscris svg{
+    margin-left: 1rem;
+    animation: float 1.6s linear  forwards infinite ;
+}
+@keyframes float {
+    0%{
+        margin-left: 1rem;
+    }
+    50%{
+        margin-left: 1.8rem;
+    }
+    100%{
+        margin-left: 1rem;
+    }
+}
+
+.pic{
+    display: grid;
+    grid-template-columns: 261px 261px;
+    grid-template-rows: repeat(5, 70px);
+}
+
+.formations{
+    grid-column-start: 2;
+    max-height: 350px;
+    width: auto;
+}
+
+.des-formations{
+    color: white;
+    grid-column: 2/3 ;
+    grid-row-start: 4;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #af7d51; */
+    justify-content: space-between;
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+}
+.des-formations h4{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.des-formations h4::first-letter{
+    font-size: 1.8rem;
+}
+
+.activites{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    max-height: 350px;
+    width: auto;
+    justify-self: end;
+}
+
+.des-activites{
+    grid-row-start: 5;
+    font-size: .95rem;
+    padding: 0 .5rem;
+    justify-self: center;
+    color: white;
+    text-transform: uppercase;
+}
