@@ -13,7 +13,7 @@ body {
     color: #e9e8e6;
     height: 100vh;
     width: 100vw;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 .header {
@@ -69,12 +69,17 @@ nav {
     padding: 0.7rem 3rem;
     background-color: #af7d51;
 }
-
-.header-bg {
-    position: relative;
+.header-bg-container{
+    width: 100vw;
+    height: 100vh;
     z-index: 0;
     grid-row: 1/15;
     grid-column: 1/4;
+    overflow: hidden;
+}
+
+.header-bg {
+    position: relative;
     height: 110vh;
     width: auto;
     margin: auto;
@@ -96,7 +101,7 @@ nav {
     grid-column: 2/3;
     grid-row: 7/10;
     height: fit-content;
-    font-size: max(3.75vw, 3.625rem);
+    font-size: min(3.75vw, 3.625rem);
     margin: 2rem 0;
     margin-left: 6rem;
     align-self: center;
