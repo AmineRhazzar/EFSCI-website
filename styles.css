@@ -38,7 +38,7 @@ nav {
 }
 
 .logo {
-    width: 6rem;
+    width: 8rem;
 }
 
 .nav-links {
@@ -210,9 +210,9 @@ nav {
     display: flex;
     justify-content: flex-end;
 }
-
 /* ########################################## END FORMATIONS STYLES ########################################## */
 
+/* ########################################## START ACTIVITES STYLES ########################################## */
 .activites {
     overflow: hidden;
     width: 17.4375rem;
@@ -260,7 +260,9 @@ nav {
     position: relative;
     z-index: 2;
 }
+/* ########################################## END ACTIVITES STYLES ########################################## */
 
+/* ########################################## START SECOND STYLES ########################################## */
 .second {
     height: 100vh;
     width: 100vw;
@@ -317,7 +319,9 @@ nav {
     text-underline-offset: 5px;
     text-decoration-thickness: 1.5px;
 }
+/* ########################################## END SECOND STYLES ########################################## */
 
+/* ########################################## START THIRD STYLES ########################################## */
 .third {
     color: white;
     width: 100vw;
@@ -348,7 +352,7 @@ nav {
 }
 .sub-bot-3 {
     max-width: 77%;
-    width: 66%  ;
+    width: 66%;
     margin-top: 5rem;
     font-weight: 300;
     font-size: 1.2rem;
@@ -389,7 +393,9 @@ nav {
     grid-row: 1/7;
     align-self: flex-end;
 }
+/* ########################################## END THIRD STYLES ########################################## */
 
+/* ########################################## START FOURTH STYLES ########################################## */
 .fourth {
     height: 30rem;
     color: black;
@@ -407,12 +413,149 @@ nav {
     font-weight: 400;
 }
 
-.logos{
+.logos {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
+/* ########################################## END FOURTH STYLES ########################################## */
+
+/* ########################################## START FIFTH STYLES ########################################## */
+.fifth {
+    height: 30rem;
+    background-color: #e5d1bd;
+    padding: 2rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fifth h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.quote {
+    font-family: "Cormorant", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote-text {
+    font-size: 2rem;
+    position: relative;
+    width: 55%;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2.5rem;
+}
+.quote-start {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 5.25rem;
+    position: relative;
+    top: 1.5rem;
+    margin-right: 0.5rem;
+    line-height: 0;
+}
+.quote-end {
+    padding: 0;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 5.25rem;
+    position: relative;
+    top: 2.75rem;
+    line-height: 0;
+}
+.quoted {
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 2rem;
+}
+/* ########################################## END FIFTH STYLES ########################################## */
+
+/* ########################################## START FOOTER STYLES ########################################## */
+footer {
+    height:fit-content;
+    padding: 2rem 3rem;
+    background-color: black;
+    color: #e9e8e6;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.footer-logo {
+    width: 9rem;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    justify-self: center;
+}
+.contact {
+    grid-column: 2/3;
+    grid-row: 2/5;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 0 0 2rem;
+}
+
+.contact h6 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 20px;
+    color: #f5f5f5;
+}
+
+.address {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.email{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.certifs {
+    grid-column: 3/5;
+    grid-row: 2/6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-left: 3rem;
+}
+.certifs h6{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 20px;
+    color: #f5f5f5;
+}
+
+.certifs-logo{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.certifs-des{
+    justify-self:start;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    padding-right: 8rem;
+}
+
+/* ########################################## END FOOTER STYLES ########################################## */
 
 /* ############################################ MOBILE ############################################ */
 @media (max-width: 1400px) {
