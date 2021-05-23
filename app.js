@@ -11,4 +11,9 @@ window.addEventListener("resize", () => {
     setHeaderHeight();
 });
 
+var Scrollbar = window.Scrollbar;
 
+Scrollbar.init(document.querySelector("#my-scrollbar"), {
+    damping: 0.1,
+    continuousScrolling: false
+})
