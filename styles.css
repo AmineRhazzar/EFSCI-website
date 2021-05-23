@@ -421,6 +421,12 @@ nav {
     justify-content: space-evenly;
     align-items: center;
 }
+.logo-container{
+    width: 12rem;
+    height: 8rem;
+    display: grid;
+    place-items: center;
+}
 /* ########################################## END FOURTH STYLES ########################################## */
 
 /* ########################################## START FIFTH STYLES ########################################## */
