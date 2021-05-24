@@ -9,7 +9,7 @@ history.scrollRestoration = "manual";
 window.addEventListener("load", () => {
     window.scrollTo(0, 0);
     setHeaderHeight();
-    if (screen.width >= 968) {
+    if (screen.width >= 1300) {
         var Scrollbar = window.Scrollbar;
         Scrollbar.init(document.querySelector("#my-scrollbar"), {
             continuousScrolling: false,
@@ -27,10 +27,14 @@ window.addEventListener("load", () => {
 });
 window.addEventListener("resize", () => {
     setHeaderHeight();
-    if (screen.width >= 968) {
+    if (screen.width >= 1300) {
+        document.querySelector(".title").innerHTML =
+            "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financements";
         document.querySelector(".title-3").innerHTML =
             "Le &nbsp;conseil&nbsp;en&nbsp;image qui&nbsp;dépasse&nbsp;le&nbsp;relooking";
     } else {
+        document.querySelector(".title").innerHTML =
+            "Formation de 4 mois éligible à tous financements";
         document.querySelector(".title-3").innerHTML =
             "Le conseil en image qui dépasse le relooking";
     }
