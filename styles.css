@@ -12,6 +12,10 @@ body {
     width: 100vw;
 }
 
+p{
+    max-width: 75ch !important;
+}
+
 .wrapper {
     overflow-x: hidden;
 }
