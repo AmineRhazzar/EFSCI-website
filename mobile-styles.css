@@ -1,4 +1,4 @@
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 968px) {
     .header {
         display: grid;
         padding-top: 3rem;
@@ -164,12 +164,17 @@
     .pq-choisir {
         margin: 0 0 2rem 0;
     }
-    .excellence {
+    .excellence-desk{
+        display: none;
+    }
+    .excellence-mob {
+        align-self: flex-end;
+        display: block;
         max-height: 460px;
         margin-right: 0;
         margin-bottom: -8rem;
         max-width: 100%;
-        height: auto;
+        height: auto; 
     }
     .third {
         display: block;
@@ -451,12 +456,17 @@
     .pq-choisir {
         margin: 0 0 2rem 0;
     }
-    .excellence {
+    .excellence-desk{
+        display: none;
+    }
+    .excellence-mob {
+        align-self: flex-end;
+        display: block;
         max-height: 460px;
         margin-right: 0;
         margin-bottom: -8rem;
         max-width: 100%;
-        height: auto;
+        height: auto; 
     }
     .third {
         display: block;
