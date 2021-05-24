@@ -450,7 +450,6 @@ nav {
 .logos {
     display: flex;
     width: 100%;
-    overflow-x: scroll;
     justify-content: space-evenly;
     align-items: center;
 }
