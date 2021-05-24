@@ -15,9 +15,14 @@ window.addEventListener("load", () => {
             continuousScrolling: false,
         });
         document.querySelector(".title").innerHTML =
-            "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financement";
+            "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financements";
         document.querySelector(".title-3").innerHTML =
             "Le &nbsp;conseil&nbsp;en&nbsp;image qui&nbsp;dépasse&nbsp;le&nbsp;relooking";
+    } else {
+        document.querySelector(".title").innerHTML =
+            "Formation de 4 mois éligible à tous financements";
+        document.querySelector(".title-3").innerHTML =
+            "Le conseil en image qui dépasse le relooking";
     }
 });
 window.addEventListener("resize", () => {
