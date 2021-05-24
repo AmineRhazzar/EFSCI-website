@@ -515,6 +515,9 @@
         height: fit-content;
         justify-content: space-between;
     }
+    .fourth h3{
+        font-size: 16px;
+    }
     .logos {
         overflow-x: scroll;
         justify-content: unset;
@@ -531,7 +534,7 @@
         margin-bottom: 3rem;
         letter-spacing: 2px;
         line-height: 20px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .quote-text {
         width: 100%;
