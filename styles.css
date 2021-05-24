@@ -8,6 +8,7 @@ body {
     font-family: "Poppins", sans-serif;
     color: #e9e8e6;
     height: 100vh;
+    overflow-x: hidden;
     width: 100vw;
 }
 
@@ -312,7 +313,7 @@ nav {
 }
 .title-2 {
     margin-top: 3rem;
-    width: 60rem;
+    width: 45rem;
     font-size: max(3.75vw, 3.5rem);
 }
 .description-cols {
@@ -354,6 +355,7 @@ nav {
     z-index: 0;
     height: 96vh;
     width: auto;
+    margin-right: 11.75rem;
     margin-bottom: -37rem;
     align-self: flex-end;
 }
