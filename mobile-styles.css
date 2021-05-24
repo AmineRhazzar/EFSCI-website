@@ -147,7 +147,7 @@
         font-weight: 400;
     }
     .title-2 {
-        font-size: 16px;
+        font-size: 2.1rem;
         width: unset;
     }
     .description-cols {
@@ -194,7 +194,7 @@
     }
     .title-3 {
         margin: 1.4rem 0 2.4rem 0;
-        font-size: 16px;
+        font-size: 2rem;
         letter-spacing: -1px;
         line-height: 47px;
         font-weight: 700;
