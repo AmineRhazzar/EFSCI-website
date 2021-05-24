@@ -14,6 +14,8 @@ window.addEventListener("load", () => {
         Scrollbar.init(document.querySelector("#my-scrollbar"), {
             continuousScrolling: false,
         });
+        document.querySelector(".title").innerHTML =
+            "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financement";
         document.querySelector(".title-3").innerHTML =
             "Le &nbsp;conseil&nbsp;en&nbsp;image qui&nbsp;dépasse&nbsp;le&nbsp;relooking";
     }
