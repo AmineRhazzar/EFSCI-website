@@ -7,6 +7,7 @@ const setHeaderHeight = () => {
 history.scrollRestoration = "manual";
 
 window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
     setHeaderHeight();
     if (screen.width >= 968) {
         var Scrollbar = window.Scrollbar;
