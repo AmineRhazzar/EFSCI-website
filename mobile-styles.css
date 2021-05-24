@@ -156,6 +156,7 @@
         flex-direction: column;
     }
     .description-cols p {
+        font-size: 14px;
         max-width: unset;
     }
     .description-cols p:first-of-type {
@@ -448,6 +449,7 @@
         flex-direction: column;
     }
     .description-cols p {
+        font-size: 14px;
         max-width: unset;
     }
     .description-cols p:first-of-type {
