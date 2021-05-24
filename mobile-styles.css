@@ -232,13 +232,17 @@
     }
     .quote-text {
         width: 100%;
-        font-size: 1.625rem;
+        font-size: 26px;
         line-height: 33px;
+    }
+    .quoted{
+        font-size: 16px;
     }
     footer{
         height: fit-content;
         display: flex;
         padding: 3rem 2rem;
+        font-size: 14px;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -275,7 +279,6 @@
     }
     .certifs-des{
         padding: 0;
-        font-size: 14px;
     }
 }
 @media screen and (max-width:408px){
