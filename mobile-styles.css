@@ -47,7 +47,7 @@
     .label {
         letter-spacing: 1px;
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 16px;
         display: block;
     }
     .sub-top {
@@ -58,7 +58,7 @@
     .title {
         grid-row: 6/10;
         margin: 0 2rem;
-        font-size: 3rem;
+        font-size: 16px;
         align-self: flex-start;
         line-height: 60px;
         width: unset;
@@ -99,12 +99,12 @@
         font-weight: 400;
     }
     .formations-des h4 {
-        font-size: 1.2rem;
+        font-size: 16px;
         line-height: 35px;
         font-weight: 700;
     }
     .formations-des h4::first-letter {
-        font-size: 1.3rem;
+        font-size: 16px;
     }
 
     .activites {
@@ -122,20 +122,20 @@
         grid-row: 1/3;
         align-self: flex-end;
         padding: 0 1rem 1rem 1rem;
-        font-size: 0.8rem;
+        font-size: 16px;
     }
 
     .second {
         padding: 10rem 2rem 0 2rem;
     }
     .sub-top-2 {
-        font-size: 0.8rem;
+        font-size: 14px;
         letter-spacing: 1px;
         line-height: 20px;
         font-weight: 400;
     }
     .title-2 {
-        font-size: 2.1rem;
+        font-size: 16px;
         width: unset;
     }
     .description-cols {
@@ -143,7 +143,7 @@
         flex-direction: column;
     }
     .description-cols p {
-        font-size: 14px;
+        font-size: 16px;
         max-width: unset;
     }
     .description-cols p:first-of-type {
@@ -174,13 +174,13 @@
         padding: 0;
     }
     .sub-top-3 {
-        font-size: 0.8rem;
+        font-size: 14px;
         line-height: 20px;
         font-weight: 400;
     }
     .title-3 {
         margin: 1.4rem 0 2.4rem 0;
-        font-size: 2rem;
+        font-size: 16px;
         letter-spacing: -1px;
         line-height: 47px;
         font-weight: 700;
@@ -189,7 +189,7 @@
     .sub-bot-3 {
         width: 100%;
         max-width: unset;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 28px;
     }
     .discover-form {
@@ -225,7 +225,7 @@
     }
     .quote-text {
         width: 100%;
-        font-size: 26px;
+        font-size: 16px;
         line-height: 33px;
     }
     .quoted{
@@ -234,7 +234,7 @@
     footer{
         display: flex;
         padding: 3rem 2rem;
-        font-size: 14px;
+        font-size: 16px;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -320,7 +320,7 @@
     .label {
         letter-spacing: 1px;
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 16px;
         display: none;
     }
     .sub-top {
@@ -334,7 +334,7 @@
         grid-column: 1/3;
         grid-row: 6/11;
         margin: 0 2rem;
-        font-size: 3rem;
+        font-size: 16px;
         align-self: flex-start;
         line-height: 60px;
         width: unset;
@@ -375,19 +375,19 @@
         justify-content: unset;
     }
     .formations-des p {
-        font-size: 0.7rem;
+        font-size: 16px;
         letter-spacing: 2px;
         line-height: 18px;
         font-weight: 400;
     }
     .formations-des h4 {
-        font-size: 1.2rem;
+        font-size: 16px;
         line-height: 35px;
         color: #ffffff;
         font-weight: 700;
     }
     .formations-des h4::first-letter {
-        font-size: 1.3rem;
+        font-size: 16px;
     }
 
     .activites {
@@ -406,7 +406,7 @@
         grid-row: 1/3;
         align-self: flex-end;
         padding: 0 1rem 1rem 1rem;
-        font-size: 0.8rem;
+        font-size: 16px;
     }
 
     .second {
@@ -414,13 +414,13 @@
         height: fit-content;
     }
     .sub-top-2 {
-        font-size: 0.8rem;
+        font-size: 14px;
         letter-spacing: 1px;
         line-height: 20px;
         font-weight: 400;
     }
     .title-2 {
-        font-size: 2.1rem;
+        font-size: 16px;
         width: unset;
     }
     .description-cols {
@@ -429,7 +429,7 @@
         flex-direction: column;
     }
     .description-cols p {
-        font-size: 14px;
+        font-size: 16px;
         max-width: unset;
     }
     .description-cols p:first-of-type {
@@ -460,14 +460,14 @@
         padding: 0;
     }
     .sub-top-3 {
-        font-size: 0.8rem;
+        font-size: 14px;
         letter-spacing: 2px;
         line-height: 20px;
         font-weight: 400;
     }
     .title-3 {
         margin: 1.4rem 0 2.4rem 0;
-        font-size: 2rem;
+        font-size: 16px;
         letter-spacing: -1px;
         line-height: 47px;
         font-weight: 700;
@@ -518,18 +518,18 @@
     }
     .quote-text {
         width: 100%;
-        font-size: 1.625rem;
+        font-size: 16px;
         line-height: 33px;
-        font-size: 24px;
+        font-size: 16px;
     }
     .quoted{
-        font-size: 20px;
+        font-size: 16px;
     }
     footer{
         height: fit-content;
         display: flex;
         padding: 3rem 2rem;
-        font-size: 14px;
+        font-size: 16px;
         flex-direction: column;
         justify-content: space-between;
     }
@@ -572,7 +572,7 @@
 
 @media screen and (max-width:381px){
     .title{
-        font-size: 2rem;
+        font-size: 16px;
         grid-row: 6/10;
     }
     .sub-bot{
@@ -591,8 +591,6 @@
 }
 
 @media screen and (min-width:530px) and (max-width:760px){
-    .title{
-    }
     .sub-bot{
         grid-row: 9/10;
     }
