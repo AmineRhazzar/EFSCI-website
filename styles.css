@@ -710,13 +710,13 @@ footer {
         justify-content: space-evenly;
         align-items: flex-start;
         transition: 0.3s all ease;
-    }
-    .slide-in {
         font-family: "Cormorant", sans-serif;
         font-size: 24px;
         line-height: 35px;
         color: #5c5c5c;
         font-weight: 600;
+    }
+    .slide-in {
         animation: slideIn 0.3s ease forwards;
     }
     @keyframes slideIn {
@@ -731,7 +731,7 @@ footer {
         display: block;
     }
 
-    .slide-in .nav-link{
+    .slide-in .nav-link {
         margin: 0;
     }
 
@@ -743,7 +743,6 @@ footer {
         justify-content: space-evenly;
         align-items: center;
     }
-    
 
     .last .nav-link-inscris {
         background-color: transparent;
