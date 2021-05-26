@@ -70,7 +70,7 @@ burger.addEventListener("click", () => {
         if (firstTimeClicked) {
             var svgArrow = document.createElement("object");
             svgArrow.data = "./arrow.svg";
-            svgArrow.style.marginLeft = ".5rem";
+            svgArrow.style.marginLeft = "1rem";
             document.querySelector(".last").appendChild(svgArrow);
             firstTimeClicked = false;
         }
