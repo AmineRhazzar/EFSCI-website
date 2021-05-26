@@ -736,7 +736,7 @@ footer {
     }
 
     .last {
-        width: min(100%, 26rem);
+        width: fit-content;
         padding: 0.7rem 1rem;
         border: 1px solid #5f5f5f;
         display: flex;
