@@ -39,3 +39,57 @@ window.addEventListener("resize", () => {
             "Le conseil en image qui dépasse le relooking";
     }
 });
+
+const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
+
+burger.addEventListener("click", () => {
+    //handle navlinks open
+    if (burger.classList.contains("close")) {
+        burger.classList.toggle("close");
+        burger.classList.toggle("open");
+        window.scrollTo(0, 0);
+        navLinks.classList.remove("slide-out");
+        navLinks.classList.add("slide-in");
+
+        document.querySelector(".label").innerHTML = "FERMER";
+
+        document.querySelector(".nav-link-inscris").innerHTML =
+            "formulaire d'inscription";
+        var svgArrow = document.createElement("object");
+        svgArrow.data = "./arrow.svg";
+        svgArrow.style.marginLeft = ".5rem";
+        document.querySelector(".last").appendChild(svgArrow);
+
+        // .header > * {
+        //     z-index: initial;
+        // }
+        document.body.style.overflow = "hidden";
+
+        document
+            .querySelectorAll(
+                ".header > *:not(.burger, .nav-links, .header-bg-container, nav)"
+            )
+            .forEach((elem) => {
+                elem.style.zIndex = "unset";
+            });
+    } else if (burger.classList.contains("open")) {
+        //handle navLinks close
+        burger.classList.toggle("open");
+        burger.classList.toggle("close");
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.remove("slide-in");
+        navLinks.classList.add("slide-out");
+        document.querySelector(".label").innerHTML = "MENU";
+
+        setTimeout(() => {
+            document.body.style.overflow = "unset";
+
+            document
+                .querySelectorAll(".header > *:not(.header-bg-container)")
+                .forEach((elem) => {
+                    elem.style.zIndex = "5";
+                });
+        }, 300);
+    }
+});
