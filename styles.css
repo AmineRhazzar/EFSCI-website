@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     color: #e9e8e6;
@@ -12,7 +16,7 @@ body {
     width: 100vw;
 }
 
-p{
+p {
     max-width: 75ch !important;
 }
 
@@ -25,7 +29,7 @@ p{
     position: relative;
     width: 100vw;
     display: grid;
-    background-color: rgb(9,9,9);
+    background-color: rgb(9, 9, 9);
     grid-template-rows: repeat(15, 1fr);
     grid-template-columns: 2fr 1fr;
 }
@@ -45,23 +49,30 @@ nav {
 
 .logo {
     width: 8rem;
+    z-index: 11;
 }
 
 .nav-links {
     display: flex;
-    width: 63%;
+    width: 71%;
+    height: 3rem;
     justify-content: space-around;
+    align-items: center;
 }
 
 .nav-link {
     list-style: none;
     text-transform: uppercase;
+    margin: 0 1rem;
 }
 
 .nav-link a {
     outline: none;
     text-decoration: none;
     color: white;
+}
+.home {
+    display: none;
 }
 .nav-link a:hover {
     text-decoration: underline;
@@ -72,6 +83,9 @@ nav {
 .nav-link-inscris {
     padding: 0.7rem 3rem;
     background-color: #af7d51;
+}
+
+.last {
 }
 
 .burger {
@@ -601,7 +615,7 @@ footer {
     .sub-bot-3 {
         max-width: unset;
     }
-    .excellence-desk{
+    .excellence-desk {
         margin-left: 0;
     }
 }
@@ -610,10 +624,10 @@ footer {
     .title {
         width: unset;
     }
-    .excellence-desk{
+    .excellence-desk {
         display: none;
     }
-    .excellence-mob{
+    .excellence-mob {
         display: block;
         align-self: flex-end;
         display: block;
@@ -621,20 +635,20 @@ footer {
         margin-right: 0;
         margin-bottom: -8rem;
         max-width: 100%;
-        height: auto; 
+        height: auto;
     }
-    .title-3{
+    .title-3 {
         max-width: unset;
-        padding-right: 4rem ;
+        padding-right: 4rem;
     }
-    .sub-bot-3{
+    .sub-bot-3 {
         grid-column: 1/3;
     }
-    .logos{
+    .logos {
         overflow-x: scroll;
         justify-content: unset;
     }
-    .logo-container{
+    .logo-container {
         margin: 0 3rem;
     }
 }
@@ -677,29 +691,100 @@ footer {
         height: fit-content;
         align-items: center;
     }
-    .logo{
+    .logo {
         width: 6rem;
     }
+
     .nav-links {
-        display: none;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        transform: translateX(100%);
+        margin: -3rem -2rem;
+        padding: 6rem 7vw;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        transition: 0.3s all ease;
     }
+    .slide-in {
+        font-family: "Cormorant", sans-serif;
+        font-size: 24px;
+        line-height: 35px;
+        color: #5c5c5c;
+        font-weight: 600;
+        animation: slideIn 0.3s ease forwards;
+    }
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+    .slide-in .home {
+        display: block;
+    }
+
+    .slide-in .nav-link{
+        margin: 0;
+    }
+
+    .slide-in .last {
+        width: min(100%, 26rem);
+        padding: 0.7rem 1rem;
+        border: 1px solid #5f5f5f;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+
+    .slide-in .last .nav-link-inscris {
+        background-color: transparent;
+        padding: 0;
+        width: 100%;
+    }
+
+    .slide-out {
+        animation: slideOut 0.3s ease forwards;
+    }
+    @keyframes slideOut {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(100%);
+        }
+    }
+
     .burger {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .bars {
-        width: 50px;
-        height: 28px;
+        width: 45px;
+        height: 30px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-left: 1.2rem;
+        transition: 0.3s all ease;
+        margin-left: 2rem;
     }
     .bar {
         height: 2px;
         width: inherit;
         background-color: white;
+        transition: 0.5s all ease;
+    }
+    .bar:nth-child(2) {
+        opacity: 1;
     }
     .label {
         letter-spacing: 1px;
@@ -707,6 +792,30 @@ footer {
         font-size: 16px;
         display: block;
     }
+
+    .open {
+        z-index: 10;
+        align-self: flex-start;
+    }
+
+    .open .bars {
+        height: 35px;
+    }
+
+    .open .bar:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: left;
+    }
+
+    .open .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: left;
+    }
+
+    .open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
     .sub-top {
         grid-row: 5/6;
         margin: 0 2rem 2rem 2rem;
@@ -809,7 +918,7 @@ footer {
     .pq-choisir {
         margin: 0 0 2rem 0;
     }
-    .excellence-desk{
+    .excellence-desk {
         display: none;
     }
     .excellence-mob {
@@ -819,7 +928,7 @@ footer {
         margin-right: 0;
         margin-bottom: -8rem;
         max-width: 100%;
-        height: auto; 
+        height: auto;
     }
     .third {
         display: block;
@@ -863,7 +972,7 @@ footer {
         height: fit-content;
         justify-content: space-between;
     }
-    .fourth h3{
+    .fourth h3 {
         font-size: 18px;
     }
     .logos {
@@ -888,48 +997,48 @@ footer {
         font-size: 28px;
         line-height: 33px;
     }
-    .quoted{
+    .quoted {
         font-size: 24px;
     }
-    footer{
+    footer {
         display: flex;
         padding: 3rem 2rem;
         font-size: 16px;
         flex-direction: column;
         justify-content: space-between;
     }
-    .contact{
+    .contact {
         padding: 0;
         margin: 3rem 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content 1fr;
     }
-    .contact h6{
+    .contact h6 {
         grid-column: 1/3;
         height: fit-content;
         margin-bottom: 1.5rem;
     }
-    .address{
+    .address {
         margin-right: 1rem;
     }
-    .email{
+    .email {
         grid-column: 2/3;
         grid-row: 2/3;
     }
-    .certifs{
+    .certifs {
         padding: 0;
         display: flex;
         flex-direction: column;
-
     }
-    .certifs h6, .certifs-logo{
+    .certifs h6,
+    .certifs-logo {
         margin-bottom: 1.5rem;
     }
-    .certifs-des{
+    .certifs-des {
         padding: 0;
     }
 }
-@media screen and (max-width:419px){
+@media screen and (max-width: 419px) {
     .header {
         display: grid;
         padding-top: 3rem;
@@ -953,11 +1062,8 @@ footer {
         height: fit-content;
         align-items: center;
     }
-    .logo{
+    .logo {
         width: 6rem;
-    }
-    .nav-links {
-        display: none;
     }
     .burger {
         display: flex;
@@ -965,24 +1071,32 @@ footer {
         align-items: center;
     }
     .bars {
-        width: 50px;
+        width: 45px;
         height: 28px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-left: 1.2rem;
     }
+    .open .bars {
+        width: 35px;
+        height: 27px;
+    }
     .bar {
         height: 2px;
         width: inherit;
         background-color: white;
     }
+
     .label {
         letter-spacing: 1px;
         font-weight: 500;
         font-size: 16px;
+    }
+    .close .label {
         display: none;
     }
+
     .sub-top {
         grid-column: 1/3;
         grid-row: 5/6;
@@ -1098,7 +1212,7 @@ footer {
     .pq-choisir {
         margin: 0 0 2rem 0;
     }
-    .excellence-desk{
+    .excellence-desk {
         display: none;
     }
     .excellence-mob {
@@ -1108,7 +1222,7 @@ footer {
         margin-right: 0;
         margin-bottom: -8rem;
         max-width: 100%;
-        height: auto; 
+        height: auto;
     }
     .third {
         display: block;
@@ -1156,7 +1270,7 @@ footer {
         height: fit-content;
         justify-content: space-between;
     }
-    .fourth h3{
+    .fourth h3 {
         font-size: 16px;
     }
     .logos {
@@ -1183,10 +1297,10 @@ footer {
         line-height: 33px;
         font-size: 24px;
     }
-    .quoted{
+    .quoted {
         font-size: 22px;
     }
-    footer{
+    footer {
         height: fit-content;
         display: flex;
         padding: 3rem 2rem;
@@ -1194,77 +1308,90 @@ footer {
         flex-direction: column;
         justify-content: space-between;
     }
-    .contact{
+    .contact {
         padding: 0;
         margin: 3rem 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content 1fr;
     }
-    .contact h6{
+    .contact h6 {
         grid-column: 1/3;
         grid-row: 1/2;
         height: fit-content;
         margin-bottom: 1.5rem;
     }
-    .address{
+    .address {
         grid-column: 1/2;
         grid-row: 2/3;
         margin-right: 1rem;
     }
-    .email{
+    .email {
         grid-column: 2/3;
         grid-row: 2/3;
     }
-    .certifs{
+    .certifs {
         padding: 0;
         display: flex;
         flex-direction: column;
-
     }
-    .certifs h6, .certifs-logo{
+    .certifs h6,
+    .certifs-logo {
         margin-bottom: 1.5rem;
     }
-    .certifs-des{
+    .certifs-des {
         padding: 0;
     }
 }
 
-
-@media screen and (max-width:381px){
-    .title{
-        font-size: 16px;
+@media screen and (max-width: 381px) {
+    .sub-top {
+        width: unset;
+    }
+    .title {
+        font-size: 34px;
         grid-row: 6/10;
     }
-    .sub-bot{
+    .sub-bot {
         grid-row: 10/11;
     }
-    .inscris{
+    .inscris {
         grid-row: 11/12;
     }
-    .formations{
+    .formations {
         grid-row: 12/17;
     }
-    .activites{
+    .activites {
         grid-row: 14/17;
     }
-    
 }
 
-@media screen and (min-width:530px) and (max-width:760px){
-    .sub-bot{
+@media screen and (min-width: 530px) and (max-width: 760px) {
+    .sub-bot {
         grid-row: 9/10;
     }
-    .inscris{
+    .inscris {
         grid-row: 10/11;
     }
 }
 
-@media screen and (min-width:761px) and (max-width:968px){
-    .sub-bot{
+@media screen and (min-width: 761px) and (max-width: 968px) {
+    .sub-bot {
         grid-row: 8/9;
     }
-    .inscris{
+    .inscris {
         grid-row: 9/10;
+    }
+}
+
+@media screen and (max-width: 307px) {
+    .sub-bot {
+        grid-row: 11/12;
+    }
+    .inscris {
+        grid-row: 12/13;
+    }
+    .inscris svg {
+        display: none;
     }
 }
