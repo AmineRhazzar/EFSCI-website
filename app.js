@@ -42,7 +42,7 @@ window.addEventListener("resize", () => {
 
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
-const firstTimeClicked = true;
+var firstTimeClicked = true;
 
 burger.addEventListener("click", () => {
     //handle navlinks open
@@ -54,6 +54,15 @@ burger.addEventListener("click", () => {
         navLinks.classList.add("slide-in");
 
         document.querySelector(".label").innerHTML = "FERMER";
+        document.body.style.overflow = "hidden";
+
+        document
+            .querySelectorAll(
+                ".header > *:not(.burger, .nav-links, .header-bg-container, nav)"
+            )
+            .forEach((elem) => {
+                elem.style.zIndex = "unset";
+            });
 
         document.querySelector(".nav-link-inscris").innerHTML =
             "formulaire d'inscription";
@@ -65,19 +74,6 @@ burger.addEventListener("click", () => {
             document.querySelector(".last").appendChild(svgArrow);
             firstTimeClicked = false;
         }
-
-        // .header > * {
-        //     z-index: initial;
-        // }
-        document.body.style.overflow = "hidden";
-
-        document
-            .querySelectorAll(
-                ".header > *:not(.burger, .nav-links, .header-bg-container, nav)"
-            )
-            .forEach((elem) => {
-                elem.style.zIndex = "unset";
-            });
     } else if (burger.classList.contains("open")) {
         //handle navLinks close
         burger.classList.toggle("open");
