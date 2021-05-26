@@ -42,6 +42,7 @@ window.addEventListener("resize", () => {
 
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
+const firstTimeClicked = true;
 
 burger.addEventListener("click", () => {
     //handle navlinks open
@@ -56,10 +57,14 @@ burger.addEventListener("click", () => {
 
         document.querySelector(".nav-link-inscris").innerHTML =
             "formulaire d'inscription";
-        var svgArrow = document.createElement("object");
-        svgArrow.data = "./arrow.svg";
-        svgArrow.style.marginLeft = ".5rem";
-        document.querySelector(".last").appendChild(svgArrow);
+
+        if (firstTimeClicked) {
+            var svgArrow = document.createElement("object");
+            svgArrow.data = "./arrow.svg";
+            svgArrow.style.marginLeft = ".5rem";
+            document.querySelector(".last").appendChild(svgArrow);
+            firstTimeClicked = false;
+        }
 
         // .header > * {
         //     z-index: initial;
