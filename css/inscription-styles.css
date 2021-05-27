@@ -850,21 +850,27 @@ footer {
     form{
         padding: 4rem;
     }
-    #nom{
-        grid-column: 1/13;
-        grid-row: 1/2;
+    .gender:nth-child(1){
+        grid-column: 1/7;
     }
-    #prenom{
+    .gender:nth-child(2){
+        grid-column: 7/13;
+    }
+    #nom{
         grid-column: 1/13;
         grid-row: 2/3;
     }
-    #date-picker{
+    #prenom{
         grid-column: 1/13;
         grid-row: 3/4;
     }
-    #nationalite{
+    #date-picker{
         grid-column: 1/13;
         grid-row: 4/5;
+    }
+    #nationalite{
+        grid-column: 1/13;
+        grid-row: 5/6;
         min-height: 2.3rem;
     }
     #ville{
