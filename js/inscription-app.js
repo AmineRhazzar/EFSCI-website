@@ -1,4 +1,8 @@
 const dateInput = document.querySelector("#date-input");
+dateInput.addEventListener("focus", () => {
+    dateInput.type = "date";
+    dateInput.focus();
+});
 dateInput.addEventListener("blur", () => {
     if (!dateInput.value) {
         dateInput.type = "text";
@@ -43,18 +47,17 @@ nationaliteSelect.addEventListener("click", function (e) {
         this.size = 0;
         firstInputFormGrp.style.height = "322px";
     }
-
 });
 
 //close
 document.addEventListener("click", function (e) {
-    if (!nationaliteSelect.contains(e.target)) { 
+    if (!nationaliteSelect.contains(e.target)) {
         nationaliteSelect.size = 0;
     }
     firstInputFormGrp.style.height = "322px";
 });
 nationaliteSelect.addEventListener("change", function () {
-    console.log(this.value); 
+    console.log(this.value);
     this.size = 0;
     firstInputFormGrp.style.height = "322px";
 });
@@ -123,7 +126,6 @@ document.querySelectorAll(".joint").forEach((fin, id) => {
         ).checked;
     });
 });
-
 
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
