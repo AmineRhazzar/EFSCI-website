@@ -54,7 +54,7 @@ burger.addEventListener("click", () => {
         navLinks.classList.add("slide-in");
 
         document.querySelector(".label").innerHTML = "FERMER";
-        document.body.style.overflow = "hidden";
+        document.body.style.overflowY = "hidden";
 
         document
             .querySelectorAll(
@@ -84,7 +84,7 @@ burger.addEventListener("click", () => {
         document.querySelector(".label").innerHTML = "MENU";
 
         setTimeout(() => {
-            document.body.style.overflow = "unset";
+            document.body.style.overflowY = "scroll";
 
             document
                 .querySelectorAll(".header > *:not(.header-bg-container)")
