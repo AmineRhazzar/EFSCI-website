@@ -9,7 +9,10 @@ dateInput.addEventListener("blur", () => {
     }
 });
 
-history.scrollRestoration = "manual";
+window.onload = () => {
+    history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);    
+};
 
 document.querySelector(".gender:nth-child(1)").addEventListener("click", () => {
     document.querySelector(".gender:nth-child(1) input").checked = true;
