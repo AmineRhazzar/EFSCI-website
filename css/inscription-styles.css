@@ -962,6 +962,9 @@ footer {
     .header-text > *{
         margin: 1rem 0;
     }
+    form{
+        padding: 4rem 2rem;
+    }
     .quote-text{
         font-size: 1.8rem;
         margin: 2.5rem 0;
