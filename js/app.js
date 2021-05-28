@@ -24,6 +24,10 @@ window.addEventListener("load", () => {
         document.querySelector(".title-3").innerHTML =
             "Le conseil en image qui dépasse le relooking";
     }
+    document.querySelector('.loader').classList.add("loader-fadeout");
+    setTimeout(() => {
+        document.querySelector(".loader").style.display = "none";
+    }, 300);
 });
 window.addEventListener("resize", () => {
     setHeaderHeight();
