@@ -37,7 +37,7 @@ h6 {
 }
 
 .header {
-    height: 60vh;
+    height: 90vh;
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -106,7 +106,7 @@ nav {
 
 .header-bg-container {
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     position: absolute;
     top: 0;
     left: 0;
