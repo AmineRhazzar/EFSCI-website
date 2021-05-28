@@ -564,6 +564,7 @@ nav {
 .fourth {
     height: 30rem;
     color: black;
+    background-color:white;
     padding: 2rem;
     display: flex;
     flex-direction: column;
