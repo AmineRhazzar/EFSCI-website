@@ -7,24 +7,35 @@ const setHeaderHeight = () => {
 history.scrollRestoration = "manual";
 
 window.addEventListener("load", () => {
+    //scroll to top because if scroll is restored the smooth scrolling gets messed up
     window.scrollTo(0, 0);
+
     setHeaderHeight();
+    
+    //on desktop
     if (screen.width >= 1300) {
-        var Scrollbar = window.Scrollbar;
-        Scrollbar.init(document.querySelector("#my-scrollbar"), {
-            continuousScrolling: false,
-        });
+        //Loading the smooth scrolling
+        // var Scrollbar = window.Scrollbar;
+        // Scrollbar.init(document.querySelector("#my-scrollbar"), {
+        //     continuousScrolling: false,
+        // });
+
+
         document.querySelector(".title").innerHTML =
             "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financements";
         document.querySelector(".title-3").innerHTML =
             "Le &nbsp;conseil&nbsp;en&nbsp;image qui&nbsp;dépasse&nbsp;le&nbsp;relooking";
     } else {
+
+
         document.querySelector(".title").innerHTML =
             "Formation de 4 mois éligible à tous financements";
         document.querySelector(".title-3").innerHTML =
             "Le conseil en image qui dépasse le relooking";
     }
 });
+
+
 window.addEventListener("resize", () => {
     setHeaderHeight();
     if (screen.width >= 1300) {
@@ -81,10 +92,11 @@ burger.addEventListener("click", () => {
         const navLinks = document.querySelector(".nav-links");
         navLinks.classList.remove("slide-in");
         navLinks.classList.add("slide-out");
+        document.body.style.overflowY = "scroll";
         document.querySelector(".label").innerHTML = "MENU";
 
         setTimeout(() => {
-            document.body.style.overflowY = "scroll";
+            
 
             document
                 .querySelectorAll(".header > *:not(.header-bg-container)")
