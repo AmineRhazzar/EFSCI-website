@@ -20,7 +20,7 @@ setTimeout(() => {
         loader.style.display = "none";
         document.body.style.overflowY = "scroll";
     }, 300) 
-}, 4000);
+}, 2500);
 
 window.addEventListener("load", () => {
     console.log(Date.now() - start);

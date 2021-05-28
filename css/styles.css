@@ -8,6 +8,12 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection{
+    background-color: #e5d1bd;
+    color: black;
+    text-shadow: none;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     color: #e9e8e6;
@@ -58,19 +64,19 @@ p {
     fill: black;
 }
 .e{
-    animation: stroke-anim 1s ease-in forwards, fill .8s ease-in 2.8s forwards ;
+    animation: stroke-anim .8s ease-in forwards, fill .5s ease-in 1.4s forwards ;
 }
 .f{
-    animation: stroke-anim 1s ease-in .5s forwards, fill .8s ease-in 2.8s forwards ;
+    animation: stroke-anim .8s ease-in .3s forwards, fill .5s ease-in 1.4s forwards ;
 }
 .c{
-    animation: stroke-anim 1s ease-in 1s forwards, fill .8s ease-in 2.8s forwards ;
+    animation: stroke-anim .8s ease-in .6s forwards, fill .5s ease-in 1.4s forwards ;
 }
 .s{
-    animation: stroke-anim 1s ease-in 1.5s forwards, fill .8s ease-in 2.8s forwards ;
+    animation: stroke-anim .8s ease-in .9s forwards, fill .5s ease-in 1.4s forwards ;
 }
 .i{
-    animation: stroke-anim 1s ease-in 2s forwards, fill .8s ease-in 2.8s forwards ;
+    animation: stroke-anim .8s ease-in 1.2s forwards, fill .5s ease-in 1.4s forwards ;
 }
 
 @keyframes stroke-anim {
@@ -98,7 +104,7 @@ p {
     background-color: #cec1b4;
     height:inherit;
     width:100%;
-    animation: slide 1s infinite 3.6s linear;
+    animation: slide 1s 2 1.8s linear;
     transform: translateX(110%);
 }
 
@@ -255,7 +261,7 @@ nav {
 
 .inscris svg {
     margin-left: 1rem;
-    animation: float 1.6s linear forwards infinite;
+    animation: float 1.4s linear forwards infinite;
 }
 @keyframes float {
     0% {
@@ -393,7 +399,7 @@ nav {
 
 /* ########################################## START SECOND STYLES ########################################## */
 .second {
-    padding: 10rem 12rem 0 12rem;
+    padding: 10rem 13vw 0 13vw;
     height: fit-content;
     width: 100vw;
     position: relative;
@@ -444,6 +450,7 @@ nav {
 .pq-choisir svg {
     margin-left: 1.5rem;
     height: 1.7rem;
+    animation: float 1.4s linear forwards infinite;
 }
 .pq-choisir:hover {
     text-decoration: underline;
@@ -484,6 +491,7 @@ nav {
     grid-row: 4/5;
     max-width: 70%;
     font-size: max(3.75vw, 3.5rem);
+    pointer-events: none;
 }
 .sub-bot-3 {
     max-width: 36vw;
@@ -511,6 +519,7 @@ nav {
     padding: 0;
     margin-left: 1.5rem;
     height: 1.7rem;
+    animation: float 1.4s linear forwards infinite;
 }
 .discover-form:hover {
     text-decoration: underline;
@@ -527,6 +536,10 @@ nav {
     grid-row: 1/9;
     margin-left: -5rem;
     margin-top: -5.5rem;
+    transition: 0.3s all ease;
+}
+.excellence-desk:hover {
+    transform: scale(1.05);
 }
 /* ########################################## END THIRD STYLES ########################################## */
 
@@ -725,6 +738,10 @@ footer {
         margin-bottom: -8rem;
         max-width: 100%;
         height: auto;
+        transition: .3s all ease;
+    }
+    .excellence-mob:hover{
+        transform: scale(1.05);
     }
     .title-3 {
         max-width: unset;
