@@ -11,29 +11,11 @@ dateInput.addEventListener("blur", () => {
     }
 });
 
-const loader = document.querySelector(".loader");
-document.body.style.overflowY = "hidden";
 //waiting for the fadeout animation to complete (300ms)
-var hideLoader = () => {
-    loader.classList.add("loader-fadeout");
-    setTimeout(() => {
-        loader.style.display = "none";
-        document.body.style.overflowY = "scroll";
-    }, 300);
-};
-
-const start = Date.now();
-
-var loaderTimeout = setTimeout(() => {
-    hideLoader();
-}, 40000);
 
 window.onload = () => {
-    while (Date.now() - start <= 3400) {}
-    hideLoader();
-
     history.scrollRestoration = "manual";
-
+    window.scrollTo(0, 0);
 };
 
 document.querySelector(".gender:nth-child(1)").addEventListener("click", () => {
