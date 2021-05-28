@@ -25,6 +25,7 @@ const start = Date.now();
 window.addEventListener("load", () => {
     if (Date.now() - start >= 3400) {
         hideLoader();
+        console.log("done:!!!!")
     }
     // clearTimeout(hideLoaderTimeout);
     
