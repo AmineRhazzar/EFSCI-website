@@ -17,13 +17,13 @@ window.onload = () => {
     window.scrollTo(0, 0);
     
         
-    loader.classList.add("loader-fadeout");
+    // loader.classList.add("loader-fadeout");
     
-    //waiting for the fadeout animation to complete (300ms) 
-    setTimeout(() => {
-        loader.style.display = "none";
-        document.body.style.overflowY = "scroll";
-    }, 300)
+    // //waiting for the fadeout animation to complete (300ms) 
+    // setTimeout(() => {
+    //     loader.style.display = "none";
+    //     document.body.style.overflowY = "scroll";
+    // }, 300)
 
 };
 
