@@ -21,10 +21,6 @@ p {
     max-width: 75ch !important;
 }
 
-.scroll-content {
-    background-color:black;
-}
-
 .loader{
     /* display: none; */
     position: relative;

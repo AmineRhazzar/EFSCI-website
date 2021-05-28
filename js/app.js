@@ -36,8 +36,10 @@ window.addEventListener("load", () => {
         document.querySelector(".title-3").innerHTML =
             "Le conseil en image qui dépasse le relooking";
     }
-
+    
     loader.classList.add("loader-fadeout");
+    
+    //waiting for the fadeout animation to complete (300ms) 
     setTimeout(() => {
         loader.style.display = "none";
         document.body.style.overflowY = "scroll";

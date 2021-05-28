@@ -9,9 +9,22 @@ dateInput.addEventListener("blur", () => {
     }
 });
 
+const loader = document.querySelector(".loader");
+document.body.style.overflowY = "hidden";
+
 window.onload = () => {
     history.scrollRestoration = "manual";
-    window.scrollTo(0, 0);    
+    window.scrollTo(0, 0);
+    
+        
+    loader.classList.add("loader-fadeout");
+    
+    //waiting for the fadeout animation to complete (300ms) 
+    setTimeout(() => {
+        loader.style.display = "none";
+        document.body.style.overflowY = "scroll";
+    }, 300)
+
 };
 
 document.querySelector(".gender:nth-child(1)").addEventListener("click", () => {
