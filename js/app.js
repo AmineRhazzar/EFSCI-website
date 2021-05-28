@@ -20,8 +20,14 @@ var hideLoader = () => {
 
 const start = Date.now();
 
+var loaderTimeout = setTimeout(() => { hideLoader();}, 40000)
+
 window.addEventListener("load", () => {
-    hideLoader();
+    const end = Date.now();
+    if (end - start >= 3000) {
+        clearTimeout(loaderTimeout);
+        hideLoader();
+    }
     // clearTimeout(hideLoaderTimeout);
     
     // console.log(Date.now() - start);
