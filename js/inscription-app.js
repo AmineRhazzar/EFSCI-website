@@ -1,3 +1,5 @@
+window.scrollTo(0, 0);
+
 const dateInput = document.querySelector("#date-input");
 dateInput.addEventListener("focus", () => {
     dateInput.type = "date";
@@ -11,20 +13,26 @@ dateInput.addEventListener("blur", () => {
 
 const loader = document.querySelector(".loader");
 document.body.style.overflowY = "hidden";
-loader.classList.add("loader-fadeout");
-    
-//waiting for the fadeout animation to complete (300ms) 
-setTimeout(() => {
-    loader.style.display = "none";
-    document.body.style.overflowY = "scroll";
-}, 3000)
+//waiting for the fadeout animation to complete (300ms)
+var hideLoader = () => {
+    loader.classList.add("loader-fadeout");
+    setTimeout(() => {
+        loader.style.display = "none";
+        document.body.style.overflowY = "scroll";
+    }, 300);
+};
+
+const start = Date.now();
+
+var loaderTimeout = setTimeout(() => {
+    hideLoader();
+}, 40000);
 
 window.onload = () => {
-    history.scrollRestoration = "manual";
-    window.scrollTo(0, 0);
-    
-        
+    while (Date.now() - start <= 3400) {}
+    hideLoader();
 
+    history.scrollRestoration = "manual";
 
 };
 

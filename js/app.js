@@ -20,12 +20,10 @@ var hideLoader = () => {
 
 const start = Date.now();
 
-var loaderTimeout = setTimeout(() => { hideLoader();}, 40000)
+var loaderTimeout = setTimeout(() => { hideLoader();}, 40000) 
 
 window.addEventListener("load", () => {
-    while (Date.now() - start <= 3400) {
-        
-    }
+    while (Date.now() - start <= 3400) {}
     hideLoader();
     // clearTimeout(hideLoaderTimeout);
     
