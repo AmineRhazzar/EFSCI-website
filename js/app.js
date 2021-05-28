@@ -5,15 +5,13 @@ const setHeaderHeight = () => {
 };
 
 history.scrollRestoration = "manual";
+document.body.style.overflowY = "hidden";
+document.querySelector("body").style.overflowY =
 
 window.addEventListener("load", () => {
     window.scrollTo(0, 0);
     setHeaderHeight();
     if (screen.width >= 1300) {
-        var Scrollbar = window.Scrollbar;
-        Scrollbar.init(document.querySelector("#my-scrollbar"), {
-            continuousScrolling: false,
-        });
         document.querySelector(".title").innerHTML =
             "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financements";
         document.querySelector(".title-3").innerHTML =
@@ -26,7 +24,12 @@ window.addEventListener("load", () => {
     }
     document.querySelector('.loader').classList.add("loader-fadeout");
     setTimeout(() => {
+        var Scrollbar = window.Scrollbar;
+        Scrollbar.init(document.querySelector("#my-scrollbar"), {
+            continuousScrolling: false,
+        });
         document.querySelector(".loader").style.display = "none";
+        document.body.style.overflowY = "scroll";
     }, 300);
 });
 window.addEventListener("resize", () => {
