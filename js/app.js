@@ -22,12 +22,15 @@ var hideLoader = () => {
     }, 300)
 };
 
-var hideLoaderTimeout = setTimeout(() => { hideLoader(); }, 50 * 1000);
+const start = Date.now();
 
 window.addEventListener("load", () => {
-    clearTimeout(hideLoaderTimeout);
-    hideLoader();
-    console.log(Date.now() - start);
+    if (Date.now() - start >= 3400) {
+        hideLoader();
+    }
+    // clearTimeout(hideLoaderTimeout);
+    
+    // console.log(Date.now() - start);
     //scroll to top because if scroll is restored the smooth scrolling gets messed up
     window.scrollTo(0, 0);
 
