@@ -57,7 +57,7 @@ p {
     background-color: #f5F5F5;
 }
 .dot10 .dot {
-    animation: anim10 5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    animation: anim10 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
     border-radius: 50%;
     width: inherit;
     height: inherit;
@@ -200,9 +200,6 @@ nav {
 .nav-link-inscris {
     padding: 0.7rem 3rem;
     background-color: #af7d51;
-}
-
-.last {
 }
 
 .burger {
