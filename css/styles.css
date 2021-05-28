@@ -22,11 +22,11 @@ p {
 }
 
 .loader{
-    /* display: none; */
     position: relative;
     height:100vh;
     width: 100vw;
     background-color:black;
+    z-index: 5;
 }
 
 .loader-fadeout{
