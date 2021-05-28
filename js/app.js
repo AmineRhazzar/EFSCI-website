@@ -1,5 +1,3 @@
-var start = Date.now();
-
 const setHeaderHeight = () => {
     const headerImg = document.querySelector(".header-bg");
     document.querySelector(".header").style.height =
