@@ -20,7 +20,7 @@ var hideLoader = () => {
 
 const start = Date.now();
 
-var loaderTimeout = setTimeout(() => { hideLoader(); }, 4000)
+var loaderTimeout = setTimeout(() => { hideLoader(); }, 3500)
 
 
 window.addEventListener("load", () => {
