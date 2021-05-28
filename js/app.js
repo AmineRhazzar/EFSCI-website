@@ -1,3 +1,5 @@
+var start = Date.now();
+
 const setHeaderHeight = () => {
     const headerImg = document.querySelector(".header-bg");
     document.querySelector(".header").style.height =
@@ -9,12 +11,24 @@ history.scrollRestoration = "manual";
 const loader = document.querySelector(".loader");
 document.body.style.overflowY = "hidden";
 
+
+
+//waiting for the fadeout animation to complete (300ms)
+setTimeout(() => {
+    loader.classList.add("loader-fadeout");
+    setTimeout(() => {
+        loader.style.display = "none";
+        document.body.style.overflowY = "scroll";
+    }, 300) 
+}, 4000);
+
 window.addEventListener("load", () => {
+    console.log(Date.now() - start);
     //scroll to top because if scroll is restored the smooth scrolling gets messed up
     window.scrollTo(0, 0);
 
     setHeaderHeight();
-    
+
     //on desktop
     if (screen.width >= 1300) {
         //Loading the smooth scrolling
@@ -23,30 +37,17 @@ window.addEventListener("load", () => {
         //     continuousScrolling: false,
         // });
 
-
         document.querySelector(".title").innerHTML =
             "Formation&nbsp;de&nbsp;4&nbsp;mois éligible&nbsp;à&nbsp;tous&nbsp;financements";
         document.querySelector(".title-3").innerHTML =
             "Le &nbsp;conseil&nbsp;en&nbsp;image qui&nbsp;dépasse&nbsp;le&nbsp;relooking";
     } else {
-
-
         document.querySelector(".title").innerHTML =
             "Formation de 4 mois éligible à tous financements";
         document.querySelector(".title-3").innerHTML =
             "Le conseil en image qui dépasse le relooking";
     }
-    
-    loader.classList.add("loader-fadeout");
-    
-    //waiting for the fadeout animation to complete (300ms) 
-    setTimeout(() => {
-        loader.style.display = "none";
-        document.body.style.overflowY = "scroll";
-    }, 300)
-
 });
-
 
 window.addEventListener("resize", () => {
     setHeaderHeight();
@@ -108,8 +109,6 @@ burger.addEventListener("click", () => {
         document.querySelector(".label").innerHTML = "MENU";
 
         setTimeout(() => {
-            
-
             document
                 .querySelectorAll(".header > *:not(.header-bg-container)")
                 .forEach((elem) => {
