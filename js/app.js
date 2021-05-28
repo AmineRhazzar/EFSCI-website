@@ -9,8 +9,6 @@ history.scrollRestoration = "manual";
 const loader = document.querySelector(".loader");
 document.body.style.overflowY = "hidden";
 
-
-
 //waiting for the fadeout animation to complete (300ms)
 var hideLoader = () => {
     loader.classList.add("loader-fadeout");
@@ -23,10 +21,7 @@ var hideLoader = () => {
 const start = Date.now();
 
 window.addEventListener("load", () => {
-    if (Date.now() - start >= 3400) {
-        hideLoader();
-        console.log("done:!!!!")
-    }
+    hideLoader();
     // clearTimeout(hideLoaderTimeout);
     
     // console.log(Date.now() - start);
