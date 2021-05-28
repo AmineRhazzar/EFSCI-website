@@ -7,6 +7,7 @@ const setHeaderHeight = () => {
 history.scrollRestoration = "manual";
 
 const loader = document.querySelector(".loader");
+document.body.style.overflowY = "hidden";
 
 window.addEventListener("load", () => {
     //scroll to top because if scroll is restored the smooth scrolling gets messed up
@@ -39,6 +40,7 @@ window.addEventListener("load", () => {
     loader.classList.add("loader-fadeout");
     setTimeout(() => {
         loader.style.display = "none";
+        document.body.style.overflowY = "scroll";
     }, 300)
 
 });
