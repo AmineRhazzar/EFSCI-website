@@ -14,15 +14,19 @@ document.body.style.overflowY = "hidden";
 
 
 //waiting for the fadeout animation to complete (300ms)
-setTimeout(() => {
+var hideLoader = () => {
     loader.classList.add("loader-fadeout");
     setTimeout(() => {
         loader.style.display = "none";
         document.body.style.overflowY = "scroll";
-    }, 300) 
-}, 2500);
+    }, 300)
+};
+
+var hideLoaderTimeout = setTimeout(() => { hideLoader(); }, 3000);
 
 window.addEventListener("load", () => {
+    clearTimeout(hideLoaderTimeout);
+    hideLoader();
     console.log(Date.now() - start);
     //scroll to top because if scroll is restored the smooth scrolling gets messed up
     window.scrollTo(0, 0);
