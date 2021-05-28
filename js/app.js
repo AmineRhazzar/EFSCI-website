@@ -6,6 +6,8 @@ const setHeaderHeight = () => {
 
 history.scrollRestoration = "manual";
 
+const loader = document.querySelector(".loader");
+
 window.addEventListener("load", () => {
     //scroll to top because if scroll is restored the smooth scrolling gets messed up
     window.scrollTo(0, 0);
@@ -33,6 +35,12 @@ window.addEventListener("load", () => {
         document.querySelector(".title-3").innerHTML =
             "Le conseil en image qui dépasse le relooking";
     }
+
+    loader.classList.add("loader-fadeout");
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 300)
+
 });
 
 
