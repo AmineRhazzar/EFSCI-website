@@ -22,7 +22,7 @@ var hideLoader = () => {
     }, 300)
 };
 
-var hideLoaderTimeout = setTimeout(() => { hideLoader(); }, 3000);
+var hideLoaderTimeout = setTimeout(() => { hideLoader(); }, 5000);
 
 window.addEventListener("load", () => {
     clearTimeout(hideLoaderTimeout);
