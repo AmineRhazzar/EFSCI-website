@@ -28,7 +28,8 @@ p {
 }
 
 .loader{
-    position: relative;
+    position: absolute;
+    top: 0;
     z-index: 20;
     height:100vh;
     width: 100vw;

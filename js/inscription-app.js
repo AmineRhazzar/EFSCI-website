@@ -97,8 +97,9 @@ document.querySelectorAll(".connu").forEach((con, id) => {
         document
             .querySelector(`.connu:nth-child(${id + 1}) input[type="text"]`)
             .addEventListener("change", (e) => {
-                document.querySelector(`.autre-sit input[type="radio"]`).value =
+                document.querySelector(`.connu:nth-child(${id + 1}) input[type="radio"]`).value =
                     e.target.value;
+                console.log(document.querySelector(`.connu:nth-child(${id + 1}) input[type="radio"]`).name + " " + document.querySelector(`.connu:nth-child(${id + 1}) input[type="radio"]`).value);
             });
         document.querySelector(
             `.connu:nth-child(${id + 1}) input[type="text"]`
